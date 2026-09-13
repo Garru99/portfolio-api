@@ -2,7 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowVercel", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
         policy.WithOrigins("https://tu-web-en-vercel.vercel.app", "http://localhost:5500")
               .AllowAnyMethod()
